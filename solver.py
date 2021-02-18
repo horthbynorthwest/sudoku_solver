@@ -10,6 +10,24 @@ board = [
     [0,4,9,2,0,6,0,0,7]
 ]
 
+def solve(board):
+    find = find_empty(board)
+    if not find:
+        return True
+    else:
+        row, col = find
+    # print(board) this helps visualise how the algorithm works!
+    for i in range(1,10):
+        if valid(board, i, (row, col)):
+            board[row][col] = i
+
+            if solve(board):
+                return True
+
+            board[row][col] = 0
+
+    return False
+
 def valid(board, num, pos):
     # Check row
     for i in range(len(board[0])):
@@ -52,3 +70,8 @@ def find_empty(board):
             if board[i][j] == 0:
                 return (i, j) # row, col - normally col, row so here for memory
     return None
+
+print_board(board)
+solve(board)
+print("________________")
+print_board(board)
