@@ -19,3 +19,8 @@ How does the backtracking algorithm work:
 	 - Go back to the previous entered number and try something else
 	 - continue until we have a solution that can possible work
  6. Continue onward once we have a solution that can work.
+
+
+Thank you to [Tech with Tim](https://www.youtube.com/watch?v=eqUwSA0xI-s&list=PLzMcBGfZo4-kE3aF6Y0wNBNih7hWRAU2o&index=1&ab_channel=TechWithTim) for the tutorial
+
+See my [Wiki](https://github.com/horthbynorthwest/sudoku_solver/wiki) for my explainations of what the code is doing!
